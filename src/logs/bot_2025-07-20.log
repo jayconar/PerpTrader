@@ -1,0 +1,72 @@
+2025-07-20 20:39:58 | INFO     | __main__:<module>:142 - Bot stopped by user
+2025-07-20 20:51:02 | INFO     | __main__:main:15 - LET THE OBAMANATOR COOK...
+2025-07-20 20:51:05 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-20 20:51:07 | INFO     | __main__:main:22 - 526 trading pairs fetched
+2025-07-20 20:51:07 | INFO     | __main__:main:23 - Looking for trades...
+2025-07-20 20:52:14 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for BTCSTUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:56:05 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for SOLVUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:56:24 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for EPICUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:56:30 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for FORMUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:56:31 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for TUTUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:56:31 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for BIDUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:56:37 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for JELLYJELLYUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:56:47 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for KERNELUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:56:54 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for WCTUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:56:55 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for GUNUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:56:55 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for PARTIUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:56:56 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for NILUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:57:05 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for DOODUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:57:11 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for SOPHUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:57:15 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for HOMEUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:57:18 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for PUMPBTCUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:57:25 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for SAHARAUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:57:26 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for IDOL: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:57:32 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for ERAUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 20:57:35 | INFO     | __main__:main:136 - Looking for trades...
+2025-07-20 20:58:47 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for BTCSTUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:02:39 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for SOLVUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:02:56 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for EPICUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:02:58 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for FORMUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:02:59 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for TUTUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:00 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for BIDUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:05 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for JELLYJELLYUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:14 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for KERNELUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:23 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for WCTUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:24 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for GUNUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:24 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for PARTIUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:24 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for NILUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:32 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for DOODUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:37 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for SOPHUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:43 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for HOMEUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:44 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for PUMPBTCUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:50 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for SAHARAUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:51 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for IDOL: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:03:57 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for ERAUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:04:00 | INFO     | __main__:main:136 - Looking for trades...
+2025-07-20 21:05:08 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for BTCSTUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:09:08 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for SOLVUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:09:20 | INFO     | __main__:<module>:142 - Bot stopped by user
+2025-07-20 21:09:22 | INFO     | __main__:main:15 - LET THE OBAMANATOR COOK...
+2025-07-20 21:09:25 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-20 21:09:26 | INFO     | __main__:main:22 - 526 trading pairs fetched
+2025-07-20 21:09:26 | INFO     | __main__:main:23 - Looking for trades...
+2025-07-20 21:10:38 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for BTCSTUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:14:45 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for SOLVUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:15:06 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for EPICUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:15:08 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for FORMUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:15:08 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for TUTUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:15:09 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for BIDUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:15:14 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for JELLYJELLYUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:15:24 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for KERNELUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:15:31 | ERROR    | src.trader:get_candles:100 - Failed to fetch candles for WCTUSDT: APIError(code=-1122): Invalid symbol status.
+2025-07-20 21:15:32 | INFO     | __main__:<module>:142 - Bot stopped by user
+2025-07-20 21:18:51 | INFO     | trader:__init__:9 - Binance Futures client initialized.
+2025-07-20 21:19:56 | INFO     | __main__:main:15 - LET THE OBAMANATOR COOK...
+2025-07-20 21:19:59 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-20 21:20:00 | INFO     | __main__:main:22 - 474 trading pairs fetched
+2025-07-20 21:20:00 | INFO     | __main__:main:23 - Looking for trades...
+2025-07-20 21:26:10 | INFO     | __main__:main:136 - Looking for trades...
+2025-07-20 21:32:25 | INFO     | __main__:main:136 - Looking for trades...
+2025-07-20 21:38:30 | INFO     | __main__:main:136 - Looking for trades...
+2025-07-20 21:44:46 | INFO     | __main__:main:136 - Looking for trades...
+2025-07-20 21:46:30 | INFO     | __main__:<module>:142 - Bot stopped by user

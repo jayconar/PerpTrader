@@ -1,0 +1,99 @@
+2025-07-18 02:32:03 | INFO     | __main__:main:13 - Let the Obamanator cook..
+2025-07-18 02:32:05 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-18 02:32:05 | INFO     | src.strategy_loader:load_strategy:18 - Loaded strategy: SampleStrategy from sample_strategy.py
+2025-07-18 02:32:06 | INFO     | __main__:main:17 - 507 trading pairs fetched.
+2025-07-18 02:32:06 | INFO     | __main__:main:21 - Checking BTCUSDT for entry signal...
+2025-07-18 02:32:06 | INFO     | __main__:main:30 - Entry signal for BTCUSDT at 120480.6, SL: 119275.79400000001, TP: 122890.21200000001
+2025-07-18 02:32:07 | INFO     | src.trader:set_leverage:78 - Leverage set to 3x for BTCUSDT
+2025-07-18 02:32:09 | INFO     | src.trader:place_limit_order:68 - Limit order placed: {'orderId': 5354682328, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJa428f795bf5587c3c33031', 'price': '120480.60', 'avgPrice': '0.00', 'origQty': '0.001', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752786129639}
+2025-07-18 02:32:09 | INFO     | __main__:main:44 - Entry order ID: 5354682328
+2025-07-18 02:39:03 | WARNING  | __main__:main:59 - SL/TP hit before fill for BTCUSDT; canceling order 5354682328
+2025-07-18 02:39:04 | INFO     | src.trader:cancel_order:115 - Order 5354682328 on BTCUSDT canceled.
+2025-07-18 02:39:04 | INFO     | __main__:main:21 - Checking ETHUSDT for entry signal...
+2025-07-18 02:39:05 | INFO     | __main__:main:30 - Entry signal for ETHUSDT at 3445.67, SL: 3411.2133, TP: 3514.5834
+2025-07-18 02:39:05 | INFO     | src.trader:set_leverage:78 - Leverage set to 3x for ETHUSDT
+2025-07-18 02:39:10 | INFO     | src.trader:place_limit_order:68 - Limit order placed: {'orderId': 4875358967, 'symbol': 'ETHUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ95c07e815ba32d01d3b1b6', 'price': '3445.67', 'avgPrice': '0.00', 'origQty': '0.035', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752786550838}
+2025-07-18 02:39:10 | INFO     | __main__:main:44 - Entry order ID: 4875358967
+2025-07-18 02:50:26 | INFO     | __main__:<module>:127 - Bot stopped by user
+2025-07-18 02:50:44 | INFO     | __main__:main:13 - Let the Obamanator cook..
+2025-07-18 02:50:45 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-18 02:50:45 | INFO     | src.strategy_loader:load_strategy:18 - Loaded strategy: SampleStrategy from sample_strategy.py
+2025-07-18 02:50:46 | INFO     | __main__:main:17 - 507 trading pairs fetched.
+2025-07-18 02:50:47 | INFO     | __main__:main:29 - Entry signal for BTCUSDT at 121573.6, SL: 120357.864, TP: 124005.07200000001
+2025-07-18 02:50:50 | INFO     | src.trader:place_limit_order:68 - Limit order placed: {'orderId': 5354957363, 'symbol': 'BTCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJae2639f70091d51fb9fc18', 'price': '121573.60', 'avgPrice': '0.00', 'origQty': '0.001', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752787250693}
+2025-07-18 02:59:45 | INFO     | __main__:<module>:125 - Bot stopped by user
+2025-07-18 03:03:02 | INFO     | __main__:main:13 - Let the Obamanator cook..
+2025-07-18 03:03:03 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-18 03:03:03 | INFO     | src.strategy_loader:load_strategy:18 - Loaded strategy: SampleStrategy from sample_strategy.py
+2025-07-18 03:03:05 | INFO     | __main__:main:17 - 507 trading pairs fetched.
+2025-07-18 03:03:05 | INFO     | __main__:main:29 - Entry signal for BTCUSDT at 122400.4, SL: 121176.396, TP: 124848.408
+2025-07-18 03:03:06 | WARNING  | src.trader:calculate_order_quantity:46 - Calculated quantity 0.0 is less than minimum 0.001 for BTCUSDT
+2025-07-18 03:03:06 | WARNING  | __main__:main:33 - Trade amount too small for BTCUSDT; skipping.
+2025-07-18 03:03:07 | INFO     | __main__:main:29 - Entry signal for ETHUSDT at 3476.77, SL: 3442.0023, TP: 3546.3054
+2025-07-18 03:03:09 | INFO     | src.trader:place_limit_order:69 - Limit order placed: {'orderId': 4875652931, 'symbol': 'ETHUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ8f16c8422c01bda37c510b', 'price': '3476.77', 'avgPrice': '0.00', 'origQty': '0.035', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752787989787}
+2025-07-18 03:03:15 | INFO     | __main__:main:53 - Entry order filled at 3476.77 (ID: 4875652931)
+2025-07-18 03:03:15 | INFO     | __main__:main:64 - Monitoring ETHUSDT for exit...
+2025-07-18 03:03:26 | INFO     | __main__:main:72 - Exit signal triggered for ETHUSDT (ID: 4875652931)
+2025-07-18 03:03:27 | INFO     | src.trader:close_position:127 - Position closed on ETHUSDT with SELL MARKET order.
+2025-07-18 03:03:30 | INFO     | src.notifier:send_email:64 - HTML email sent successfully.
+2025-07-18 03:03:30 | INFO     | __main__:main:111 - Trade complete for ETHUSDT, logged and notified.
+2025-07-18 03:03:33 | ERROR    | src.sheets_updater:update_sheet:22 - Failed to update Google Sheet: <Response [200]>
+2025-07-18 03:03:34 | INFO     | __main__:main:29 - Entry signal for BCHUSDT at 495.01, SL: 490.05989999999997, TP: 504.9102
+2025-07-18 03:03:36 | INFO     | src.trader:place_limit_order:69 - Limit order placed: {'orderId': 1096547063, 'symbol': 'BCHUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ85bb94193044f11527caf0', 'price': '495.01', 'avgPrice': '0.00', 'origQty': '0.246', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752788017079}
+2025-07-18 03:03:40 | INFO     | __main__:<module>:125 - Bot stopped by user
+2025-07-18 03:48:25 | INFO     | __main__:main:13 - Let the Obamanator cook..
+2025-07-18 03:48:27 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-18 03:48:27 | INFO     | src.strategy_loader:load_strategy:18 - Loaded strategy: SampleStrategy from sample_strategy.py
+2025-07-18 03:48:28 | INFO     | __main__:main:17 - 507 trading pairs fetched.
+2025-07-18 03:48:30 | INFO     | __main__:main:30 - Entry signal for ETHUSDT at 3460.0, SL: 3425.4, TP: 3529.2000000000003
+2025-07-18 03:48:34 | INFO     | src.trader:place_limit_order:69 - Limit order placed: {'orderId': 4876010691, 'symbol': 'ETHUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ17d96929f69bcc1df1ca20', 'price': '3460.00', 'avgPrice': '0.00', 'origQty': '0.035', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752790714464}
+2025-07-18 03:48:41 | INFO     | __main__:main:54 - Entry order filled at 3460.0 (ID: 4876010691)
+2025-07-18 03:48:41 | INFO     | __main__:main:65 - Monitoring ETHUSDT for exit...
+2025-07-18 03:50:03 | INFO     | __main__:main:72 - Exit signal triggered for ETHUSDT (ID: 4876010691)
+2025-07-18 03:50:04 | INFO     | src.trader:close_position:127 - Position closed on ETHUSDT with SELL MARKET order.
+2025-07-18 03:50:08 | INFO     | src.notifier:send_email:64 - HTML email sent successfully.
+2025-07-18 03:50:08 | INFO     | __main__:main:110 - Trade complete for ETHUSDT, logged and notified.
+2025-07-18 03:50:11 | ERROR    | src.sheets_updater:update_sheet:35 - Failed to append to Google Sheet: <Response [200]>
+2025-07-18 03:50:15 | INFO     | __main__:main:30 - Entry signal for LTCUSDT at 102.23, SL: 101.2077, TP: 104.2746
+2025-07-18 03:50:18 | INFO     | __main__:<module>:124 - Bot stopped by user
+2025-07-18 04:50:20 | ERROR    | sheets_updater:update_sheet:45 - Spreadsheet not found: Trades
+2025-07-18 04:51:09 | ERROR    | sheets_updater:update_sheet:45 - Spreadsheet not found: 14F4o3gNwO69NWniD9oXmpaLFo0YeLPEZ9GBAChdK6bI
+2025-07-18 04:51:11 | INFO     | __main__:main:14 - Let the Obamanator cook...
+2025-07-18 04:51:13 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-18 04:51:13 | INFO     | __main__:<module>:135 - Bot stopped by user
+2025-07-18 04:51:30 | ERROR    | sheets_updater:update_sheet:45 - Spreadsheet not found: 14F4o3gNwO69NWniD9oXmpaLFo0YeLPEZ9GBAChdK6bI
+2025-07-18 04:53:59 | INFO     | sheets_updater:update_sheet:32 - Appended new trade to Google Sheet 'Obamanator_Trades'.
+2025-07-18 05:12:07 | INFO     | sheets_updater:update_sheet:56 - Updated row 2 in Google Sheet 'Obamanator_Trades'.
+2025-07-18 05:32:31 | INFO     | sheets_updater:update_sheet:65 - Appended 2 rows starting at row 2 to Google Sheet 'Obamanator_Trades'.
+2025-07-18 05:32:31 | INFO     | sheets_updater:update_sheet:69 - Emptied CSV while preserving headers: C:\Users\Insider\Projets\Obamanator\src\records\recent_trades.csv
+2025-07-18 05:36:33 | INFO     | __main__:main:14 - Let the Obamanator cook...
+2025-07-18 05:36:34 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-18 05:36:35 | INFO     | __main__:main:19 - 507 trading pairs fetched
+2025-07-18 05:36:35 | INFO     | __main__:main:20 - Looking for trades...
+2025-07-18 05:36:36 | INFO     | __main__:main:33 - Entry signal for ETHUSDT at 3459.99, SL: 3425.3900999999996, TP: 3529.1897999999997
+2025-07-18 05:36:39 | INFO     | src.trader:place_limit_order:69 - Limit order placed: {'orderId': 4876901923, 'symbol': 'ETHUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ7881ddc5b46bcd32ef25b1', 'price': '3459.99', 'avgPrice': '0.00', 'origQty': '0.035', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752797199489}
+2025-07-18 05:36:45 | INFO     | __main__:main:57 - Entry order filled at 3459.99 (ID: 4876901923)
+2025-07-18 05:36:45 | INFO     | __main__:main:69 - Monitoring ETHUSDT for exit...
+2025-07-18 05:39:00 | INFO     | __main__:main:76 - Exit signal triggered for ETHUSDT (ID: 4876901923)
+2025-07-18 05:39:00 | INFO     | src.trader:close_position:127 - Position closed on ETHUSDT with SELL MARKET order.
+2025-07-18 05:39:04 | INFO     | src.notifier:send_email:64 - HTML email sent successfully.
+2025-07-18 05:39:04 | INFO     | __main__:main:124 - Trade complete for ETHUSDT, logged and notified.
+2025-07-18 05:39:12 | INFO     | src.sheets_updater:update_sheet:65 - Appended 1 rows starting at row 2 to Google Sheet 'Obamanator_Trades'.
+2025-07-18 05:39:13 | INFO     | __main__:main:33 - Entry signal for XRPUSDT at 3.5169, SL: 3.481731, TP: 3.587238
+2025-07-18 05:39:17 | INFO     | __main__:<module>:136 - Bot stopped by user
+2025-07-18 05:45:03 | INFO     | __main__:main:14 - Let the Obamanator cook...
+2025-07-18 05:45:06 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-18 05:45:08 | INFO     | __main__:main:19 - 507 trading pairs fetched
+2025-07-18 05:45:08 | INFO     | __main__:main:20 - Looking for trades...
+2025-07-18 05:45:08 | INFO     | __main__:main:33 - Entry signal for ETHUSDT at 3459.99, SL: 3425.3900999999996, TP: 3529.1897999999997
+2025-07-18 05:45:11 | INFO     | src.trader:place_limit_order:69 - Limit order placed: {'orderId': 4876965115, 'symbol': 'ETHUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJef504296c3fa96d7540f3', 'price': '3459.99', 'avgPrice': '0.00', 'origQty': '0.035', 'executedQty': '0.000', 'cumQty': '0.000', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.00', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752797711388}
+2025-07-18 05:45:17 | INFO     | __main__:main:57 - Entry order filled at 3459.99 (ID: 4876965115)
+2025-07-18 05:45:17 | INFO     | __main__:main:69 - Monitoring ETHUSDT for exit...
+2025-07-18 05:46:12 | INFO     | __main__:main:76 - Exit signal triggered for ETHUSDT (ID: 4876965115)
+2025-07-18 05:46:13 | INFO     | src.trader:close_position:127 - Position closed on ETHUSDT with SELL MARKET order.
+2025-07-18 05:46:17 | INFO     | src.notifier:send_email:64 - Email update sent successfully.
+2025-07-18 05:46:17 | INFO     | __main__:main:124 - Trade complete for ETHUSDT, logged and notified.
+2025-07-18 05:46:24 | INFO     | src.sheets_updater:update_sheet:65 - Appended 1 rows starting at row 2 to Google Sheet 'Obamanator_Trades'.
+2025-07-18 05:46:25 | INFO     | __main__:main:33 - Entry signal for XRPUSDT at 3.504, SL: 3.46896, TP: 3.57408
+2025-07-18 05:46:31 | INFO     | src.trader:place_limit_order:69 - Limit order placed: {'orderId': 408093463, 'symbol': 'XRPUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJa1adefba293320885fc792', 'price': '3.5040', 'avgPrice': '0.00', 'origQty': '34.8', 'executedQty': '0.0', 'cumQty': '0.0', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'BUY', 'positionSide': 'BOTH', 'stopPrice': '0.0000', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1752797791890}
+2025-07-18 05:53:19 | INFO     | __main__:<module>:136 - Bot stopped by user

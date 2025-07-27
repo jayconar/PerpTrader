@@ -1,0 +1,3 @@
+order_id,side,symbol,cost,quantity,profit,risk_to_reward,entry_price,exit_price,entry_time,exit_time
+4876901923,Long,ETHUSDT,122.0,0.035,-0.00352602,1:2,3459.99,3459.89,1970-01-21 06:53:17,1970-01-21 06:53:17
+4876965115,Long,ETHUSDT,122.0,0.035,-0.00352602,1:2,3459.99,3459.89,2025-07-18 00:15:17,2025-07-18 00:16:13
