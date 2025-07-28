@@ -39,7 +39,7 @@ class Trader:
             return 0
 
         usdt_amount = config.TRADE_QUANTITY_USDT
-        raw_qty = usdt_amount / entry_price
+        raw_qty = (usdt_amount * config.LEVERAGE) / entry_price
         quantity = self.round_down(raw_qty, filters['step_size'])
 
         if quantity < filters['min_qty']:

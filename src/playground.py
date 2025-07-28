@@ -1,4 +1,4 @@
 from trader import Trader
 
 trad = Trader()
-print(trad.exchange.futures_exchange_info()['symbols'])
+print(trad.calculate_order_quantity("BTCUSDT", 100000))

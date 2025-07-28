@@ -33,7 +33,7 @@ def main():
                 continue
 
             side_enum = SIDE_BUY if side == "LONG" else SIDE_SELL
-            logger.info(f"Entry signal for {symbol} at {entry_price}, SL: {stop_loss}, TP: {target}")
+            logger.info(f"{side_enum} Entry signal for {symbol} at {entry_price}, SL: {stop_loss}, TP: {target}")
             trader.set_leverage(symbol, config.LEVERAGE)
             quantity = trader.calculate_order_quantity(symbol, entry_price)
             if quantity <= 0:
@@ -62,7 +62,7 @@ def main():
                     entry_time = time.time()
                     order_filled = True
                     break
-                if last_close <= stop_loss or last_close >= target:
+                if strategy.exit_signal(side_enum, last_close, target, stop_loss):
                     logger.warning(f"SL/TP hit before fill for {symbol}; canceling order {order_id}")
                     trader.cancel_order(symbol, order_id)
                     break
@@ -77,7 +77,7 @@ def main():
                 last_traded_price = trader.get_ticker(symbol).get("price", None)
                 if not last_traded_price:
                     continue
-                if strategy.exit_signal(side, last_traded_price, target, stop_loss):
+                if strategy.exit_signal(side, float(last_traded_price), target, stop_loss):
                     logger.info(f"Exit signal triggered for {symbol} (ID: {order_id})")
                     trader.close_position(symbol, quantity, side_enum)
                     exit_time = time.time()

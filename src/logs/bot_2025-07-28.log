@@ -1,0 +1,61 @@
+2025-07-28 05:47:34 | INFO     | __main__:main:15 - LET THE OBAMANATOR COOK...
+2025-07-28 05:47:37 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-28 05:47:39 | INFO     | __main__:main:22 - 478 trading pairs fetched
+2025-07-28 05:47:39 | INFO     | __main__:main:23 - Looking for trades...
+2025-07-28 05:47:48 | INFO     | __main__:main:36 - Entry signal for ETCUSDT at 21.871, SL: 25.496470999999996, TP: 10.994587000000006
+2025-07-28 05:47:55 | INFO     | src.trader:place_limit_order:68 - Limit order placed: {'orderId': 230775266, 'symbol': 'ETCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ60aac7d0bae70c804ec7', 'price': '21.871', 'avgPrice': '0.00', 'origQty': '5.57', 'executedQty': '0.00', 'cumQty': '0.00', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.000', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1753661875790}
+2025-07-28 05:48:02 | WARNING  | __main__:main:66 - SL/TP hit before fill for ETCUSDT; canceling order 230775266
+2025-07-28 05:48:02 | INFO     | __main__:main:71 - Looking for trades...
+2025-07-28 05:48:14 | INFO     | __main__:main:36 - Entry signal for BNBUSDT at 761.8, SL: 886.8859999999999, TP: 386.54200000000026
+2025-07-28 05:48:19 | INFO     | src.trader:place_limit_order:68 - Limit order placed: {'orderId': 559842560, 'symbol': 'BNBUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ635a9d8a732d3eda38accc', 'price': '761.800', 'avgPrice': '0.00', 'origQty': '0.16', 'executedQty': '0.00', 'cumQty': '0.00', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.000', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1753661899685}
+2025-07-28 05:48:25 | WARNING  | __main__:main:66 - SL/TP hit before fill for BNBUSDT; canceling order 559842560
+2025-07-28 05:48:26 | INFO     | __main__:main:71 - Looking for trades...
+2025-07-28 05:50:51 | INFO     | __main__:main:36 - Entry signal for SUIUSDT at 4.9, SL: 5.004999999999999, TP: 4.585000000000004
+2025-07-28 05:50:58 | INFO     | src.trader:place_limit_order:68 - Limit order placed: {'orderId': 280238170, 'symbol': 'SUIUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJfd63f7ecac7c98b08235f9', 'price': '4.900000', 'avgPrice': '0.00', 'origQty': '24.8', 'executedQty': '0.0', 'cumQty': '0.0', 'cumQuote': '0.0000000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.000000', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1753662059206}
+2025-07-28 05:51:05 | WARNING  | __main__:main:66 - SL/TP hit before fill for SUIUSDT; canceling order 280238170
+2025-07-28 05:51:06 | INFO     | __main__:main:71 - Looking for trades...
+2025-07-28 05:51:10 | INFO     | __main__:<module>:142 - Bot stopped by user
+2025-07-28 06:04:21 | INFO     | __main__:main:15 - LET THE OBAMANATOR COOK...
+2025-07-28 06:04:25 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-28 06:04:27 | INFO     | __main__:main:22 - 478 trading pairs fetched
+2025-07-28 06:04:27 | INFO     | __main__:main:23 - Looking for trades...
+2025-07-28 06:04:38 | INFO     | __main__:main:36 - Entry signal for ETCUSDT at 21.787, SL: 25.521942, TP: 10.582173999999998
+2025-07-28 06:04:41 | INFO     | src.trader:place_limit_order:68 - Limit order placed: {'orderId': 230776920, 'symbol': 'ETCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ39db608dbda7ac0184d59f', 'price': '21.787', 'avgPrice': '0.00', 'origQty': '5.59', 'executedQty': '0.00', 'cumQty': '0.00', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.000', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1753662882351}
+2025-07-28 06:04:48 | WARNING  | __main__:main:66 - SL/TP hit before fill for ETCUSDT; canceling order 230776920
+2025-07-28 06:04:49 | INFO     | __main__:main:71 - Looking for trades...
+2025-07-28 06:05:03 | INFO     | __main__:main:36 - Entry signal for BNBUSDT at 759.41, SL: 887.772, TP: 374.3239999999997
+2025-07-28 06:05:10 | INFO     | src.trader:place_limit_order:68 - Limit order placed: {'orderId': 559845051, 'symbol': 'BNBUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ938489f532317781d5ae4b', 'price': '759.410', 'avgPrice': '0.00', 'origQty': '0.16', 'executedQty': '0.00', 'cumQty': '0.00', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.000', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1753662911227}
+2025-07-28 06:05:17 | WARNING  | __main__:main:66 - SL/TP hit before fill for BNBUSDT; canceling order 559845051
+2025-07-28 06:05:18 | INFO     | __main__:main:71 - Looking for trades...
+2025-07-28 06:05:52 | INFO     | __main__:<module>:142 - Bot stopped by user
+2025-07-28 06:10:13 | INFO     | __main__:main:15 - LET THE OBAMANATOR COOK...
+2025-07-28 06:10:16 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-28 06:10:18 | INFO     | __main__:main:22 - 478 trading pairs fetched
+2025-07-28 06:10:18 | INFO     | __main__:main:23 - Looking for trades...
+2025-07-28 06:10:34 | INFO     | __main__:main:36 - SELL Entry signal for ETCUSDT at 21.871, SL: 25.496470999999996, TP: 10.994587000000006
+2025-07-28 06:10:37 | INFO     | src.trader:place_limit_order:68 - Limit order placed: {'orderId': 230777560, 'symbol': 'ETCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ3c9f031181da0b55d45465', 'price': '21.871', 'avgPrice': '0.00', 'origQty': '5.57', 'executedQty': '0.00', 'cumQty': '0.00', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.000', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1753663238020}
+2025-07-28 06:10:44 | WARNING  | __main__:main:66 - SL/TP hit before fill for ETCUSDT; canceling order 230777560
+2025-07-28 06:10:45 | INFO     | __main__:main:71 - Looking for trades...
+2025-07-28 06:10:48 | INFO     | __main__:<module>:142 - Bot stopped by user
+2025-07-28 06:11:35 | INFO     | __main__:main:15 - LET THE OBAMANATOR COOK...
+2025-07-28 06:11:38 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-28 06:11:40 | INFO     | __main__:main:22 - 478 trading pairs fetched
+2025-07-28 06:11:40 | INFO     | __main__:main:23 - Looking for trades...
+2025-07-28 06:11:55 | INFO     | __main__:main:36 - SELL Entry signal for ETCUSDT at 21.871, SL: 25.496470999999996, TP: 10.994587000000006
+2025-07-28 06:11:59 | INFO     | src.trader:place_limit_order:68 - Limit order placed: {'orderId': 230777764, 'symbol': 'ETCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJ68070623944b2839c881eb', 'price': '21.871', 'avgPrice': '0.00', 'origQty': '5.57', 'executedQty': '0.00', 'cumQty': '0.00', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.000', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1753663319675}
+2025-07-28 06:12:05 | WARNING  | __main__:main:66 - SL/TP hit before fill for ETCUSDT; canceling order 230777764
+2025-07-28 06:12:06 | INFO     | __main__:main:71 - Looking for trades...
+2025-07-28 06:12:11 | INFO     | __main__:<module>:142 - Bot stopped by user
+2025-07-28 06:14:50 | INFO     | __main__:main:15 - LET THE OBAMANATOR COOK...
+2025-07-28 06:14:53 | INFO     | src.trader:__init__:9 - Binance Futures client initialized.
+2025-07-28 06:14:54 | INFO     | __main__:main:22 - 478 trading pairs fetched
+2025-07-28 06:14:54 | INFO     | __main__:main:23 - Looking for trades...
+2025-07-28 06:15:08 | INFO     | __main__:main:36 - SELL Entry signal for ETCUSDT at 21.871, SL: 25.496470999999996, TP: 10.994587000000006
+2025-07-28 06:15:10 | INFO     | src.trader:place_limit_order:68 - Limit order placed: {'orderId': 230778144, 'symbol': 'ETCUSDT', 'status': 'NEW', 'clientOrderId': 'x-Cb7ytekJa6147e01a1dba505b35d1', 'price': '21.871', 'avgPrice': '0.00', 'origQty': '5.57', 'executedQty': '0.00', 'cumQty': '0.00', 'cumQuote': '0.00000', 'timeInForce': 'GTC', 'type': 'LIMIT', 'reduceOnly': False, 'closePosition': False, 'side': 'SELL', 'positionSide': 'BOTH', 'stopPrice': '0.000', 'workingType': 'CONTRACT_PRICE', 'priceProtect': False, 'origType': 'LIMIT', 'priceMatch': 'NONE', 'selfTradePreventionMode': 'EXPIRE_MAKER', 'goodTillDate': 0, 'updateTime': 1753663511307}
+2025-07-28 06:32:25 | INFO     | __main__:main:61 - Entry order filled at 21.871 (ID: 230778144)
+2025-07-28 06:32:25 | INFO     | __main__:main:74 - Monitoring ETCUSDT for exit...
+2025-07-28 06:32:35 | CRITICAL | __main__:<module>:144 - Fatal error in main execution: '<=' not supported between instances of 'str' and 'float'
+2025-07-28 06:32:35 | INFO     | __main__:<module>:145 - Bot shutdown unexpectedly
+2025-07-28 06:41:34 | INFO     | trader:__init__:9 - Binance Futures client initialized.
+2025-07-28 06:42:06 | INFO     | trader:__init__:9 - Binance Futures client initialized.
+2025-07-28 06:42:17 | INFO     | trader:__init__:9 - Binance Futures client initialized.

@@ -5,7 +5,7 @@ from src.logger import logger
 
 
 class LiquiditySweepStrategy(StrategyInterface):
-    def _get_candles(self, symbol, interval, limit=config.LOWER_CANDLE_LIMIT):
+    def _get_candles(self, symbol, interval, limit=100):
         try:
             exchange = Client(config.BINANCE_API_KEY, config.BINANCE_API_SECRET, testnet=config.TESTNET)
             klines = exchange.futures_klines(symbol=symbol, interval=interval, limit=limit)
@@ -81,8 +81,8 @@ class LiquiditySweepStrategy(StrategyInterface):
                 if candle['low'] < low_val:
                     low_val = candle['low']
                     key_index = i
-        else:  # SHORT
-            # Find highest high candle
+        else:
+            # Find the highest high candle
             high_val = float('-inf')
             key_index = -1
             for i, candle in enumerate(candles):
@@ -92,14 +92,14 @@ class LiquiditySweepStrategy(StrategyInterface):
 
         # Validate enough candles before and after key candle
         if key_index < 10 or key_index > len(candles) - 10:
-            return (False, 0, 0, 0)
+            return False, 0, 0, 0
 
         # Find FVGs before and after the key candle
         if side == "LONG":
             # For LONG trades: look for bearish FVG before key candle
             bearish_fvgs = self._detect_fvg(candles[:key_index], 'bearish')
             if not bearish_fvgs:
-                return (False, 0, 0, 0)
+                return False, 0, 0, 0
 
             # Get the most recent bearish FVG
             bearish_fvg = bearish_fvgs[-1]
@@ -112,7 +112,7 @@ class LiquiditySweepStrategy(StrategyInterface):
             # Find bullish FVG after key candle
             bullish_fvgs = self._detect_fvg(candles[key_index:], 'bullish')
             if not bullish_fvgs:
-                return (False, 0, 0, 0)
+                return False, 0, 0, 0
 
             # Get the first bullish FVG after key candle
             bullish_fvg = bullish_fvgs[0]
@@ -131,13 +131,13 @@ class LiquiditySweepStrategy(StrategyInterface):
                 stop_loss = low_val * 0.999  # Slightly below key low
                 risk = entry_price - stop_loss
                 target_price = entry_price + (3 * risk)  # 1:3 RR
-                return (True, entry_price, stop_loss, target_price)
+                return True, entry_price, stop_loss, target_price
 
-        else:  # SHORT trade
+        else:
             # For SHORT trades: look for bullish FVG before key candle
             bullish_fvgs = self._detect_fvg(candles[:key_index], 'bullish')
             if not bullish_fvgs:
-                return (False, 0, 0, 0)
+                return False, 0, 0, 0
 
             # Get the most recent bullish FVG
             bullish_fvg = bullish_fvgs[-1]
@@ -150,7 +150,7 @@ class LiquiditySweepStrategy(StrategyInterface):
             # Find bearish FVG after key candle
             bearish_fvgs = self._detect_fvg(candles[key_index:], 'bearish')
             if not bearish_fvgs:
-                return (False, 0, 0, 0)
+                return False, 0, 0, 0
 
             # Get the first bearish FVG after key candle
             bearish_fvg = bearish_fvgs[0]
@@ -171,7 +171,7 @@ class LiquiditySweepStrategy(StrategyInterface):
                 target_price = entry_price - (3 * risk)  # 1:3 RR
                 return (True, entry_price, stop_loss, target_price)
 
-        return (False, 0, 0, 0)
+        return False, 0, 0, 0
 
     # Existing liquidity sweep detection methods remain unchanged
     def detect_liquidity_sweep(self, candles: list) -> tuple:
@@ -286,6 +286,136 @@ class LiquiditySweepStrategy(StrategyInterface):
 
         return None, None, None
 
+    def _find_fvg(self, candles: list, start_idx: int, end_idx: int, fvg_type: str) -> list:
+        """
+        Find Fair Value Gaps (FVGs) in candle data
+        Args:
+            candles: List of candles
+            start_idx: Start index for search
+            end_idx: End index for search
+            fvg_type: 'bearish' or 'bullish'
+        Returns:
+            List of FVG dictionaries with keys:
+                'start_index': Index of first candle in FVG
+                'zone': (top_price, bottom_price) of FVG zone
+                'fvg_top': Low of first candle (for bearish) or high of first candle (for bullish)
+                'ob_top': High of candle before FVG (for bearish) or low of candle before FVG (for bullish)
+        """
+        fvgs = []
+        for i in range(start_idx, end_idx - 2):
+            candle1 = candles[i]
+            candle2 = candles[i + 1]
+            candle3 = candles[i + 2]
+
+            if fvg_type == 'bearish':
+                # Bearish FVG: High of candle1 < Low of candle3
+                if candle1['high'] < candle3['low']:
+                    # Get OB top (high of candle before FVG)
+                    ob_top = candles[i - 1]['high'] if i > 0 else None
+                    fvgs.append({
+                        'start_index': i,
+                        'zone': (candle1['high'], candle3['low']),
+                        'fvg_top': candle1['low'],  # Low of first candle
+                        'ob_top': ob_top  # High of candle before FVG
+                    })
+
+            elif fvg_type == 'bullish':
+                # Bullish FVG: Low of candle1 > High of candle3
+                if candle1['low'] > candle3['high']:
+                    # Get OB bottom (low of candle before FVG)
+                    ob_bottom = candles[i - 1]['low'] if i > 0 else None
+                    fvgs.append({
+                        'start_index': i,
+                        'zone': (candle3['high'], candle1['low']),
+                        'fvg_bottom': candle1['high'],  # High of first candle
+                        'ob_bottom': ob_bottom  # Low of candle before FVG
+                    })
+        return fvgs
+
+    def _verify_inverse_fvg(self, candles: list, lowest_low_index: int, order_type: str) -> tuple:
+        """
+        Verify inverse FVG conditions
+        Returns:
+            tuple: (is_valid, entry_price, stop_loss, target_price)
+        """
+        n = len(candles)
+        # 1. Find bearish FVG before the lowest low (for long) or bullish FVG before the highest high (for short)
+        fvg_before = self._find_fvg(
+            candles,
+            max(0, lowest_low_index - 50),  # Search up to 50 candles before
+            lowest_low_index - 2,  # End before the lowest low
+            'bearish' if order_type == 'LONG' else 'bullish'
+        )
+
+        if not fvg_before:
+            return False, 0, 0, 0
+
+        # Use the most recent FVG before the low point
+        fvg_before = fvg_before[-1]
+
+        # 2. Find FVG after the low point
+        fvg_after = self._find_fvg(
+            candles,
+            lowest_low_index,
+            n - 2,
+            'bullish' if order_type == 'LONG' else 'bearish'
+        )
+
+        if not fvg_after:
+            return False, 0, 0, 0
+
+        # Use the first FVG after the low point
+        fvg_after = fvg_after[0]
+
+        # 3. Check violation conditions
+        violation_condition1 = False
+        violation_condition2 = False
+
+        # Check candles after the low point
+        for i in range(lowest_low_index + 1, n):
+            candle = candles[i]
+
+            if order_type == 'LONG':
+                # Check close above fvg_top (low of first candle in bearish FVG)
+                if candle['close'] > fvg_before['fvg_top']:
+                    violation_condition1 = True
+
+                # Check high above ob_top (high of candle before bearish FVG)
+                if fvg_before['ob_top'] is not None and candle['high'] > fvg_before['ob_top']:
+                    violation_condition2 = True
+
+            else:  # SHORT
+                # Check close below fvg_bottom (high of first candle in bullish FVG)
+                if candle['close'] < fvg_before['fvg_bottom']:
+                    violation_condition1 = True
+
+                # Check low below ob_bottom (low of candle before bullish FVG)
+                if fvg_before['ob_bottom'] is not None and candle['low'] < fvg_before['ob_bottom']:
+                    violation_condition2 = True
+
+            if violation_condition1 and violation_condition2:
+                break
+
+        if not (violation_condition1 and violation_condition2):
+            return False, 0, 0, 0
+
+        # 4. Calculate entry price (max of open/close for third candle in FVG after)
+        third_candle_idx = fvg_after['start_index'] + 2
+        third_candle = candles[third_candle_idx]
+        entry_price = max(third_candle['open'], third_candle['close'])
+
+        # 5. Calculate risk management (1:3 RR)
+        if order_type == 'LONG':
+            stop_loss = candles[lowest_low_index]['low'] * 0.999  # Slightly below lowest low
+            risk = entry_price - stop_loss
+            target_price = entry_price + (3 * risk)
+        else:  # SHORT
+            stop_loss = candles[lowest_low_index]['high'] * 1.001  # Slightly above highest high
+            risk = stop_loss - entry_price
+            target_price = entry_price - (3 * risk)
+
+        return True, entry_price, stop_loss, target_price
+
     def entry_signal(self, symbol, candles: list) -> tuple:
         # Step 1: Detect liquidity sweep
         side, swing_point, key_index = self.detect_liquidity_sweep(candles)
@@ -293,13 +423,44 @@ class LiquiditySweepStrategy(StrategyInterface):
         if not side:
             return False, "", 0, 0, 0
 
-        # Step 2: Get lower timeframe candles
-        ltf_candles = self._get_candles(symbol, config.LOWER_TIMEFRAME, config.LOWER_CANDLE_LIMIT)
-        if not ltf_candles or len(ltf_candles) < 20:
+        # Step 2: Switch to lower timeframe
+        ltf_candles = self._get_candles(
+            symbol,
+            config.LOWER_TIMEFRAME,
+            config.LOWER_CANDLE_LIMIT
+        )
+
+        if len(ltf_candles) < 20:  # Need at least 20 candles
             return False, "", 0, 0, 0
 
-        # Step 3: Check for inverse FVG
-        valid, entry_price, stop_loss, target_price = self._check_inverse_fvg(ltf_candles, side)
+        # Step 3: Find lowest low (for LONG) or highest high (for SHORT)
+        if side == "LONG":
+            # Find lowest low candle index
+            lowest_low = float('inf')
+            lowest_low_index = -1
+            for i, candle in enumerate(ltf_candles):
+                if candle['low'] < lowest_low:
+                    lowest_low = candle['low']
+                    lowest_low_index = i
+        else:  # SHORT
+            # Find highest high candle index
+            highest_high = -float('inf')
+            lowest_low_index = -1  # Actually will be highest high index
+            for i, candle in enumerate(ltf_candles):
+                if candle['high'] > highest_high:
+                    highest_high = candle['high']
+                    lowest_low_index = i
+
+        # Step 4: Verify we have enough candles around the key point
+        if lowest_low_index < 10 or len(ltf_candles) - lowest_low_index < 10:
+            return False, "", 0, 0, 0
+
+        # Step 5: Verify inverse FVG conditions
+        valid, entry_price, stop_loss, target_price = self._verify_inverse_fvg(
+            ltf_candles,
+            lowest_low_index,
+            side
+        )
 
         if valid:
             return True, side, entry_price, stop_loss, target_price
