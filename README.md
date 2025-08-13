@@ -2,9 +2,12 @@
 
 A modular Python bot for automated trading on Binance USDT-margined perpetual futures. Designed for plug-and-play strategies, detailed logging, email notifications, and real-time Google Sheets updates.
 
+View the example Google sheets trade log here:  
+https://docs.google.com/spreadsheets/d/1HkcVgiBfmpBku8bCkCf7-tzxq03WXmS-0c_ZxknC3CE/edit?usp=sharing
+
 ---
 
-## 🚀 Features
+## Features
 * **Testnet compatibility**: Easily switch between Testnet and Mainnet for testing by changing the boolean value of `TESTNET` in `config.py`
 * **Modular Architecture**: Separate core logic from strategies. Swap strategies by name in the `config.py`, no code changes required.
 * **Strategy Interface**: Define `entry_signal()` and `exit_signal()` by inheriting `StrategyInterface` in your custom strategy class.
@@ -24,7 +27,7 @@ A modular Python bot for automated trading on Binance USDT-margined perpetual fu
 
 ---
 
-## 📦 Installation
+## Installation
 
 1. **Clone the repository**
 
@@ -64,7 +67,7 @@ A modular Python bot for automated trading on Binance USDT-margined perpetual fu
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 FuturesTraderBot/
@@ -87,7 +90,7 @@ FuturesTraderBot/
 
 ---
 
-## ⚙️ Usage
+## Usage
 
 ```bash
 python src/main.py
@@ -106,7 +109,7 @@ The bot will:
 
 ---
 
-## 🎯 Creating Custom Strategies
+## Creating Custom Strategies
 
 1. Add a new file in `bot/strategy/`, e.g. `my_strategy.py`.
 2. Inherit from `StrategyInterface`:
